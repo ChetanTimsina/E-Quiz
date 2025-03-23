@@ -183,5 +183,6 @@ function updateCountdown() {
     time--;
   } else {
     next_button.dispatchEvent(new Event("click"));
+    canGoNext = 1;
   }
 }
