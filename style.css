@@ -23,7 +23,6 @@ a {
   gap: 30vw;
   justify-content: center;
   font-size: 2.5vw;
-  margin-top: 8vw;
 }
 #user_image {
   background-image: url(images/userimage.jpg);
@@ -49,7 +48,7 @@ a {
   position: absolute;
 }
 .btn {
-  margin: 2vw;
+  margin: 2vw 13vw;
   font-size: 3vw;
   background-color: #3eb8d4;
   border: 1px solid black;
@@ -59,7 +58,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(15, 1fr);
   gap: 5vw 15vw;
-  margin-top: 5vw;
+  margin: 5vw 0;
   justify-content: center;
   grid-template-areas:
     "card1   ."
