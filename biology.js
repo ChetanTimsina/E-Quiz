@@ -82,7 +82,7 @@ option.forEach((opt) => {
   options++;
 });
 
-next_button.addEventListener("click", () => {
+$("#next_button").click(() => {
   if (canGoNext > 0) {
     if (QuesNo + 1 < no_question) {
       QuesNo++;

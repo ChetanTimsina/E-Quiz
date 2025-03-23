@@ -18,19 +18,22 @@ let total =
 
 let display_points = document.querySelector("#display_points");
 display_points.innerHTML = total;
-display_points.addEventListener("dblclick", () => {
-  deletes = prompt("This will reset your points.Type 'Yes' or 'No'");
-  if (deletes.toLowerCase() == "yes") {
-    localStorage.setItem("sportpoints", 0);
-    localStorage.setItem("mathpoints", 0);
-    localStorage.setItem("mappoints", 0);
-    localStorage.setItem("historypoints", 0);
-    localStorage.setItem("chemistrypoints", 0);
-    localStorage.setItem("biologypoints", 0);
-    total = 0;
-    display_points.innerHTML = total;
-    alert("All points have been reset.");
-  }
+let Change = document.querySelectorAll(".Change");
+Change.forEach((c) => {
+  c.addEventListener("dblclick", () => {
+    deletes = prompt("This will reset your points.Type 'Yes' or 'No'");
+    if (deletes.toLowerCase() == "yes") {
+      localStorage.setItem("sportpoints", 0);
+      localStorage.setItem("mathpoints", 0);
+      localStorage.setItem("mappoints", 0);
+      localStorage.setItem("historypoints", 0);
+      localStorage.setItem("chemistrypoints", 0);
+      localStorage.setItem("biologypoints", 0);
+      total = 0;
+      display_points.innerHTML = total;
+      alert("All points have been reset.");
+    }
+  });
 });
 greet.innerHTML = `Hi ${Uname}`;
 document.getElementById("showToastBtn").addEventListener("click", function () {

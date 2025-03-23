@@ -7,7 +7,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #fafafa;
+  background-color: #9df9fc;
 }
 main {
   display: flex;
@@ -50,12 +50,15 @@ a {
 }
 .btn {
   margin: 2vw;
+  font-size: 3vw;
+  background-color: #3eb8d4;
+  border: 1px solid black;
 }
 #container-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(15, 1fr);
-  gap: 5vw;
+  gap: 5vw 15vw;
   margin-top: 5vw;
   justify-content: center;
   grid-template-areas:
@@ -80,11 +83,18 @@ a {
   width: 25vw;
   height: 28vw;
   box-shadow: 0.2vw 0.2vw 10px black;
-  font-size: 3.5vw;
   display: flex;
   align-items: end;
   padding: 3vw;
   border-radius: 2vw;
+  background-color: white;
+}
+.container > section > h5,
+h6 {
+  font-size: 3vw;
+}
+.answereds {
+  background-color: white;
 }
 .container div {
   background-size: cover;
@@ -134,7 +144,13 @@ a {
   }
 }
 .container h6 {
-  color: rgba(0, 255, 255, 0.671);
+  color: rgba(0, 0, 0, 0.671);
+}
+#greet {
+  font-size: 2.5vw;
+}
+#heading h5 {
+  font-size: 2.3vw;
 }
 #sports_image {
   background-image: url(images/sports.png);
@@ -298,13 +314,12 @@ a {
 }
 .disabled {
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 #status {
   display: flex;
   justify-content: center;
   gap: 25vw;
-  font-size: 2vw;
   padding: 2vw;
   width: 60%;
   margin: 5vw auto;
@@ -320,8 +335,12 @@ a {
   align-items: center;
   gap: 2vw;
 }
+#status h5 {
+  font-size: 2.5vw;
+}
 #status h4 {
   color: #45bad5;
+  font-size: 2vw;
 }
 #status::before {
   content: "Double Tap on Points to Reset";
