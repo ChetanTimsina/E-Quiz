@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+}
+
+/*  */
+#heading {
+  display: flex;
+  gap: 30vw;
+  justify-content: center;
+  font-size: 2.5vw;
+  margin-top: 4vw;
+}
+#user_image {
+  background-image: url(images/userimage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+}
+
+#ranking_image {
+  background-image: url(images/trophy.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 4vw;
+  height: 4vw;
+}
+.vertical_line {
+  height: 6vw;
+  border: 1px solid rgba(0, 0, 0, 0.527);
+  position: absolute;
+}
+#container-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  gap: 5vw;
+  margin-top: 5vw;
+  justify-content: center;
+  grid-template-areas:
+    "card1   ."
+    "card1   card2"
+    "card1   card2"
+    "card1   card2"
+    ".   card2"
+    "card3   ."
+    "card3   card4"
+    "card3   card4"
+    "card3   card4"
+    ".   card4"
+    "card5   ."
+    "card5   card6"
+    "card5   card6"
+    "card5   card6"
+    ".   card6";
+}
+.container {
+  position: relative;
+  width: 25vw;
+  height: 28vw;
+  box-shadow: 0.2vw 0.2vw 10px black;
+  font-size: 3.5vw;
+  display: flex;
+  align-items: end;
+  padding: 3vw;
+  border-radius: 2vw;
+}
+.container div {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 17vw;
+  height: 17vw;
+  position: absolute;
+  top: -3vw;
+}
+@media (max-width: 900px) {
+  #container-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(15, auto);
+    gap: 9vw;
+    margin-top: 6vw;
+    grid-template-areas:
+      "card1"
+      "card1"
+      "card1"
+      "card2"
+      "card2"
+      "card2"
+      "card3"
+      "card3"
+      "card3"
+      "card4"
+      "card4"
+      "card4"
+      "card5"
+      "card5"
+      "card5"
+      "card6"
+      "card6"
+      "card6";
+  }
+  .container {
+    width: 50vw;
+    height: 40vw;
+    justify-content: center;
+    font-size: 6vw;
+  }
+  .container div {
+    width: 25vw;
+    height: 25vw;
+    top: -7vw;
+  }
+}
+.container h6 {
+  color: rgba(0, 255, 255, 0.671);
+}
+#sports_image {
+  background-image: url(images/sports.png);
+}
+#chemistry_image {
+  background-image: url(images/chemistry.png);
+}
+#math_image {
+  background-image: url(images/math.png);
+}
+#History_image {
+  background-image: url(images/history.png);
+}
+#Biology_image {
+  background-image: url(images/biology.png);
+}
+#Map_image {
+  background-image: url(images/Map.png);
+}
+#Progress_bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+  width: 100%;
+  gap: 5vw;
+}
+#cross {
+  background-image: url(images/wrong-svgrepo-com.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 3.5vw;
+  height: 3.5vw;
+}
+#progress_container {
+  width: 70vw;
+  height: 3.5vw;
+  border: 2px solid black;
+  padding: 0.5vw;
+  padding-left: 2vw;
+  border-radius: 1.75vw;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  font-size: 1.1vw;
+}
+#progress {
+  width: 60vw;
+  height: 1vw;
+  background-color: #efefef;
+  border-radius: 0.5vw;
+  display: flex;
+}
+#progress_done {
+  width: 0%; /*Change this width later*/
+  height: 1vw;
+  background-color: #ff9e40;
+  border-radius: 0.5vw;
+}
+#Question_container {
+  background-color: #dcf8ff;
+  margin-top: 10vw;
+  height: 30vw;
+  width: 80vw;
+  border-radius: 3vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw;
+  font-size: 1.3vw;
+}
+#steps {
+  position: absolute;
+  top: -5vw;
+  left: 34vw;
+  background-color: white;
+  border-radius: 50%;
+  width: 12vw;
+  height: 12vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#step_progress {
+  border: 10px solid #efefef;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#step_progress_done {
+  border: 10px solid #ff9e40;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+#answer_container {
+  margin-top: 5vw;
+  height: 50vw;
+  width: 80vw;
+  border-radius: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vw;
+  font-size: 1.1vw;
+}
+#answer_container section {
+  height: 10vw;
+  width: 100%;
+  border-radius: 2.5vw;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+}
+#answer_container section:hover {
+  cursor: pointer;
+}
+.result {
+  border: 1px solid #dadada;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.correct {
+  background-image: url(images/tick.svg); /*Use later*/
+}
+.wrong {
+  background-image: url(images/wrong.svg); /*Use later*/
+}
+#next_button {
+  height: 10vw;
+  width: 100%;
+  border-radius: 2.5vw;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3eb8d4;
+  margin: 4vw 0;
+  font-size: 1.1vw;
+}
+#next_button:hover {
+  cursor: pointer;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+#status {
+  display: flex;
+  justify-content: center;
+  gap: 25vw;
+  font-size: 2vw;
+  padding: 2vw;
+  width: 60%;
+  margin: 5vw auto;
+  background-color: white;
+  border-radius: 3vw;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.534);
+  position: relative;
+  z-index: 0;
+}
+#status > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+#status h4 {
+  color: #45bad5;
+}
+#status::before {
+  content: "Double Tap on Points to Reset";
+  position: absolute;
+  left: 0;
+  bottom: -3vw;
+  height: 3vw;
+  color: black;
+  border-radius: 1.5vw;
+  padding: 0 5vw;
+  z-index: -1;
+  font-weight: 500;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.2vw;
+  font-size: 2vw;
+  animation: moveText 3s ease-in-out 0s infinite alternate;
+}
+@keyframes moveText {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 32%;
+  }
+}
