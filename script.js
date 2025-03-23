@@ -33,3 +33,8 @@ display_points.addEventListener("dblclick", () => {
   }
 });
 greet.innerHTML = `Hi ${Uname}`;
+document.getElementById("showToastBtn").addEventListener("click", function () {
+  let toastElement = document.getElementById("myToast");
+  let toast = new bootstrap.Toast(toastElement);
+  toast.show();
+});
